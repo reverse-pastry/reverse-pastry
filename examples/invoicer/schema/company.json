@@ -19,7 +19,7 @@
     "logo": { "type": "string", "description": "Path to logo file" },
     "invoice_prefix": {
       "type": "string",
-      "description": "Prefix for invoice numbers, e.g. JZSW"
+      "description": "Prefix for invoice numbers, e.g. ACME"
     },
     "invoice_counter": {
       "type": "integer",

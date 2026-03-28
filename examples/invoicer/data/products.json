@@ -1,0 +1,20 @@
+[
+  {
+    "key": "CON-100",
+    "description": "Strategy consulting",
+    "price": 2500,
+    "unit": "per day"
+  },
+  {
+    "key": "DEV-200",
+    "description": "Software development",
+    "price": 1800,
+    "unit": "per day"
+  },
+  {
+    "key": "TR-300",
+    "description": "Technical training",
+    "price": 3000,
+    "unit": "per day"
+  }
+]

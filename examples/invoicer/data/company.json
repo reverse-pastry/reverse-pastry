@@ -1,0 +1,19 @@
+{
+  "id": "acme",
+  "name": "Acme Consulting LLC",
+  "address1": "123 Main Street",
+  "city": "Austin",
+  "state": "TX",
+  "postal_code": "78701",
+  "country": "US",
+  "phone": "512-555-0100",
+  "email": "billing@acmeconsulting.example",
+  "website": "https://acmeconsulting.example",
+  "invoice_prefix": "ACME",
+  "invoice_counter": 104,
+  "default_payment_terms": 30,
+  "colors": {
+    "primary": "#2563eb",
+    "secondary": "#1e40af"
+  }
+}

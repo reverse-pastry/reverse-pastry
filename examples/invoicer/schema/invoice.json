@@ -7,7 +7,7 @@
   "properties": {
     "number": {
       "type": "string",
-      "description": "Invoice number with company prefix, e.g. JZSW-263",
+      "description": "Invoice number with company prefix, e.g. ACME-101",
       "pattern": "^[A-Z]+-\\d+$"
     },
     "date": {

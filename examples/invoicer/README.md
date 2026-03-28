@@ -2,7 +2,15 @@
 
 A real-world application of the Reverse Pastry pattern, replacing a full Invoice Ninja installation.
 
-## Before (Traditional Software)
+## There is no app
+
+This is not software you run. There is no server, no UI, no CLI. You clone this repo, open your AI agent (Claude Code, Cursor, whatever you use), and talk to it. The agent reads `CLAUDE.md`, understands the schemas and data, and operates the invoicing system through conversation.
+
+"Create an invoice for Globex, 3 days of strategy consulting." The agent looks up the client, finds the product, generates the JSON, validates it against the schema, and writes it. Done.
+
+See [CLAUDE.md](CLAUDE.md) for the full agent operating instructions.
+
+## Before (The Old Way)
 
 - Invoice Ninja (Laravel + PHP)
 - Docker Compose: 4 services (app, nginx, mysql, redis)
@@ -15,13 +23,29 @@ A real-world application of the Reverse Pastry pattern, replacing a full Invoice
 
 - A git repo
 - JSON files for data
-- Schema documentation
-- Claude Code skills for operations
-- Lightweight PDF generation
+- JSON Schema for validation
+- An AI agent as the interface
 
-## Schema
+Total infrastructure: one directory on disk.
 
-See [schema/](schema/) for the data model.
+## Structure
+
+```
+schema/              # JSON Schema definitions
+  company.json
+  client.json
+  invoice.json
+  product.json
+data/                # Actual data, git-tracked
+  company.json
+  clients.json
+  products.json
+  invoices/
+    ACME-101.json
+    ACME-102.json
+    ACME-103.json
+CLAUDE.md            # Agent operating instructions
+```
 
 ## Core Entities
 
@@ -30,15 +54,15 @@ See [schema/](schema/) for the data model.
 | Company | Your business info (name, address, logo, invoice prefix) |
 | Client | Client organizations you invoice |
 | Contact | Individual POCs at a client (multiple per client) |
-| Product | Reusable line item templates (e.g., daily training rates) |
+| Product | Reusable line item templates (e.g., daily consulting rates) |
 | Invoice | An invoice with embedded line items |
 
-## Skills
+## What the agent can do
 
-| Skill | What it does |
-|-------|-------------|
-| `/new-invoice` | Create a new invoice interactively |
-| `/list-invoices` | Show invoices, filterable by status/client/date |
-| `/generate-pdf` | Render an invoice to PDF |
-| `/email-invoice` | Send an invoice to client contacts |
-| `/invoice-summary` | Generate a report for accountants |
+| Operation | What happens |
+|-----------|-------------|
+| Create invoice | Agent asks for client + line items, generates valid JSON, writes to `data/invoices/` |
+| List invoices | Agent reads invoice files, filters by status/client/date/amount |
+| Update status | Agent updates status and payment fields when invoices are sent or paid |
+| Generate PDF | Agent renders invoice data to PDF using company branding |
+| Report | Agent queries invoice data for summaries, aging, revenue by client |

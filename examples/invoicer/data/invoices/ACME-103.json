@@ -1,0 +1,25 @@
+{
+  "number": "ACME-103",
+  "date": "2026-03-20",
+  "due_date": "2026-05-04",
+  "client_id": "globex",
+  "contact_id": "hank-s",
+  "status": "draft",
+  "line_items": [
+    {
+      "product_key": "TR-300",
+      "description": "AI workflow training, 2-day workshop",
+      "quantity": 2,
+      "unit_price": 3000,
+      "amount": 6000
+    }
+  ],
+  "subtotal": 6000,
+  "tax": 0,
+  "total": 6000,
+  "amount_paid": 0,
+  "amount_due": 6000,
+  "terms": "Net 45",
+  "created_at": "2026-03-20T11:00:00Z",
+  "updated_at": "2026-03-20T11:00:00Z"
+}

@@ -1,0 +1,51 @@
+:root {
+  --base-font-size: 16px;
+  --theme-color: #e8590c;
+  --base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --base-line-height: 1.6;
+  --content-max-width: 720px;
+  --code-font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --code-font-size: 0.875em;
+  --blockquote-border-color: var(--theme-color);
+  --cover-heading-font-weight: 700;
+  --cover-blockquote-font-size: 1.5em;
+  --cover-button-border: 2px solid var(--theme-color);
+  --cover-button-primary-border: 2px solid var(--theme-color);
+}
+
+section.cover {
+  font-weight: 600;
+}
+
+section.cover blockquote {
+  font-weight: 600;
+}
+
+section.cover .cover-main > p:last-child a {
+  font-weight: 600;
+}
+
+
+.cover-main > p:first-child img {
+  margin-bottom: -2rem;
+}
+
+.markdown-section h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.markdown-section h2 {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.markdown-section pre {
+  border-radius: 6px;
+}
+
+.markdown-section hr {
+  border: none;
+  margin: 2rem 0;
+}

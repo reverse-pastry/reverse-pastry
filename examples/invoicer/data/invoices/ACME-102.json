@@ -1,0 +1,32 @@
+{
+  "number": "ACME-102",
+  "date": "2026-03-01",
+  "due_date": "2026-03-31",
+  "client_id": "initech",
+  "contact_id": "bill-l",
+  "status": "sent",
+  "line_items": [
+    {
+      "product_key": "DEV-200",
+      "description": "Internal tooling sprint, week of Mar 3",
+      "quantity": 5,
+      "unit_price": 1800,
+      "amount": 9000
+    },
+    {
+      "product_key": "TR-300",
+      "description": "Team onboarding session",
+      "quantity": 1,
+      "unit_price": 3000,
+      "amount": 3000
+    }
+  ],
+  "subtotal": 12000,
+  "tax": 0,
+  "total": 12000,
+  "amount_paid": 0,
+  "amount_due": 12000,
+  "terms": "Net 30",
+  "created_at": "2026-03-01T09:00:00Z",
+  "updated_at": "2026-03-01T09:00:00Z"
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "globex",
+    "name": "Globex Corporation",
+    "address1": "456 Commerce Blvd",
+    "city": "Dallas",
+    "state": "TX",
+    "postal_code": "75201",
+    "country": "US",
+    "payment_terms": 45,
+    "contacts": [
+      {
+        "id": "hank-s",
+        "first_name": "Hank",
+        "last_name": "Scorpio",
+        "email": "hank@globex.example",
+        "is_primary": true,
+        "send_invoices": true
+      }
+    ]
+  },
+  {
+    "id": "initech",
+    "name": "Initech",
+    "address1": "789 Office Park Dr",
+    "city": "Houston",
+    "state": "TX",
+    "postal_code": "77002",
+    "country": "US",
+    "contacts": [
+      {
+        "id": "bill-l",
+        "first_name": "Bill",
+        "last_name": "Lumbergh",
+        "email": "bill@initech.example",
+        "is_primary": true,
+        "send_invoices": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "number": "ACME-101",
+  "date": "2026-02-15",
+  "due_date": "2026-04-01",
+  "client_id": "globex",
+  "contact_id": "hank-s",
+  "status": "paid",
+  "line_items": [
+    {
+      "product_key": "CON-100",
+      "description": "Q1 strategy review, 3 days on-site",
+      "quantity": 3,
+      "unit_price": 2500,
+      "amount": 7500
+    }
+  ],
+  "subtotal": 7500,
+  "tax": 0,
+  "total": 7500,
+  "amount_paid": 7500,
+  "amount_due": 0,
+  "notes": "Thank you for your business.",
+  "terms": "Net 45",
+  "created_at": "2026-02-15T10:00:00Z",
+  "updated_at": "2026-03-20T14:30:00Z"
+}
