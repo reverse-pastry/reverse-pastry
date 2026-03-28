@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Invoice",
+  "description": "A single invoice with embedded line items",
+  "type": "object",
+  "required": ["number", "date", "client_id", "line_items", "status"],
+  "properties": {
+    "number": {
+      "type": "string",
+      "description": "Invoice number with company prefix, e.g. JZSW-263",
+      "pattern": "^[A-Z]+-\\d+$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Invoice date (YYYY-MM-DD)"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Payment due date"
+    },
+    "client_id": {
+      "type": "string",
+      "description": "Reference to client record"
+    },
+    "contact_id": {
+      "type": "string",
+      "description": "POC who originated this job"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "sent", "partial", "paid", "cancelled"]
+    },
+    "line_items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["product_key", "quantity", "unit_price", "amount"],
+        "properties": {
+          "product_key": {
+            "type": "string",
+            "description": "Reference to product template, e.g. TR-1300"
+          },
+          "description": {
+            "type": "string",
+            "description": "Line item details (Reggie ID, course code, dates, etc.)"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 1
+          },
+          "unit_price": {
+            "type": "number",
+            "minimum": 0
+          },
+          "amount": {
+            "type": "number",
+            "description": "quantity * unit_price"
+          }
+        }
+      }
+    },
+    "subtotal": { "type": "number" },
+    "tax": { "type": "number", "default": 0 },
+    "total": { "type": "number" },
+    "amount_paid": { "type": "number", "default": 0 },
+    "amount_due": { "type": "number" },
+    "notes": { "type": "string" },
+    "terms": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

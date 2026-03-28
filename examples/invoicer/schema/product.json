@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product",
+  "description": "A reusable line item template",
+  "type": "object",
+  "required": ["key", "price"],
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Short code, e.g. TR-1300"
+    },
+    "description": {
+      "type": "string",
+      "description": "Default description for this product"
+    },
+    "price": {
+      "type": "number",
+      "description": "Default unit price"
+    },
+    "unit": {
+      "type": "string",
+      "description": "What the price represents, e.g. 'per day', 'flat rate'",
+      "default": "per day"
+    }
+  }
+}
